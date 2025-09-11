@@ -20,6 +20,7 @@
                   <li><a href="investor-relations">Investor Relations</a></li>
                    <li><a href="contact">Contact Us</a></li>
                    <li><a href="blogs">News & Updates</a></li>
+                   <li><a href="sitemap">Sitemap</a></li>
                 </ul>
               </div>
             </div>
