@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="images/logo/fav.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sitemap | SMB Properties</title>
+    <meta name="description"
+        content="Navigate the SMB Properties website. Find links to our luxury developments, about us page, investor relations, careers, news, and contact information.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.smb.ke/sitemap">
+
+    <link rel="shortcut icon" href="images/logo/fav.png" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/support.css">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand: #1D423D;
+            --brand-2: #a3845f;
+            --text: #1e2b28;
+            --muted: #6e7e7a;
+            --bg: #f6f8f7;
+            --card: #ffffff;
+            --ring: rgba(163, 132, 95, .35);
+            --shadow: 0 6px 20px rgba(0, 0, 0, .08);
+            --shadow-lg: 0 12px 28px rgba(0, 0, 0, .12);
+            --radius: 16px;
+        }
+
+        html,
+        body {
+            color: var(--text);
+            background: var(--bg);
+            font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Hero / inner banner */
+        .inner-banner {
+            background:
+                radial-gradient(1200px 400px at 20% 0%, rgba(255, 255, 255, .06), transparent 60%),
+                linear-gradient(135deg, #204a44, #183a35);
+            padding: 160px 0 80px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        .inner-banner::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 40 40'><path fill='rgba(255,255,255,.04)' d='M0 0h40v40H0z'/><path fill='rgba(255,255,255,.04)' d='M20 0h1v40h-1zM0 20h40v1H0z'/></svg>") center/160px repeat;
+            mix-blend-mode: overlay;
+            opacity: .5;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .inner-banner h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            letter-spacing: .5px;
+            margin: 0 0 10px;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: .25rem;
+            font-size: 15px;
+        }
+
+        .breadcrumb-nav a {
+            color: #D5C4A4;
+            text-decoration: none;
+        }
+
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb-nav span {
+            color: #fff;
+            opacity: .9;
+        }
+
+        .breadcrumb-nav .sep {
+            opacity: .6;
+            margin: 0 .35rem;
+        }
+
+        /* Sitemap wrapper */
+        .sitemap-section {
+            padding: 72px 0 96px;
+        }
+
+        /* Cards grid */
+        .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 28px;
+        }
+
+        @media (max-width: 991.98px) {
+            .sitemap-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .sitemap-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .sitemap-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 28px;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .sitemap-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .sitemap-title {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--brand-2);
+            margin: 0 0 14px;
+        }
+
+        /* Lists */
+        .sitemap-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .sitemap-list>li>a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--brand);
+            font-weight: 600;
+            background: #f2f5f4;
+            transition: background .2s ease, color .2s ease, transform .2s ease;
+            outline: none;
+        }
+
+        .sitemap-list>li>a .chev {
+            margin-left: auto;
+            font-size: 18px;
+            line-height: 0;
+            opacity: .65;
+            transition: transform .2s ease, opacity .2s ease;
+        }
+
+        .sitemap-list>li>a:hover {
+            background: #e8efed;
+            color: #12332e;
+            transform: translateX(2px);
+        }
+
+        .sitemap-list>li>a:hover .chev {
+            transform: translateX(2px);
+            opacity: .9;
+        }
+
+        .sitemap-list>li>a:focus {
+            box-shadow: 0 0 0 3px var(--ring);
+        }
+
+        /* Nested (second-level) lists */
+        .sitemap-list li ul {
+            list-style: none;
+            margin: 10px 0 0 0;
+            padding: 12px 12px 6px;
+            border-left: 3px solid var(--brand-2);
+            background: #fbfaf8;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .sitemap-list li ul li {
+            margin: 0 0 8px 0;
+        }
+
+        .sitemap-list li ul li a {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #333;
+            padding: 6px 2px 6px 22px;
+            border-radius: 8px;
+            transition: color .2s ease, background .2s ease, transform .2s ease;
+            outline: none;
+        }
+
+        .sitemap-list li ul li a::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 2px;
+            transform: rotate(45deg);
+            background: var(--brand-2);
+            position: absolute;
+            left: 6px;
+            top: 50%;
+            translate: 0 -50%;
+            opacity: .9;
+        }
+
+        .sitemap-list li ul li a:hover {
+            background: #f1eee9;
+            color: #111;
+            transform: translateX(2px);
+        }
+
+        .sitemap-list li ul li a:focus {
+            box-shadow: 0 0 0 3px var(--ring);
+        }
+
+        .banner-center {
+            min-height: 240px;
+            /* adjust if needed */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* horizontal center */
+            justify-content: center;
+            /* vertical center */
+            text-align: center;
+        }
+
+
+        /* Logo + header minor tweaks */
+        #header .smb-logo img {
+            height: auto;
+            max-height: 44px;
+        }
+
+        /* Utility: section header spacing on mobile */
+        @media (max-width:575.98px) {
+            .inner-banner {
+                padding: 128px 0 64px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="megamenu"> </div>
+    <section id="header">
+        <div class="common-container">
+            <div class="headerlinksection">
+                <div class="smb-logo">
+                    <a href="https://smb.ke/"><img src="images/logo/smbw.png"
+                            alt="SMB Properties — kenya apartments for sale"></a>
+                </div>
+                <div class="headerright">
+                    <ul class="headerlink">
+                        <li href="javascript:void(0);" class="" rel="#about-dropdown"><a href="about"><span>About
+                                    SMB</span></a></li>
+                        <li href="javascript:void(0);" class="" rel="#projects-dropdown"><a
+                                href="projects"><span>Developments </span></a></li>
+                        <li><a href="blogs">News & Updates</a></li>
+                        <li href="javascript:void(0);" class="hasDropdown" rel="#contact-dropdown"><a
+                                href="contact"><span>Contact </span></a></li>
+                    </ul>
+
+                    <div class="enquirebt formClosed"><a href="javascript:;" id="modalbx">Enquire now</a></div>
+                    <div class="ham">
+                        <a href="javascript:;" id="menu"><img src="images/ham.svg" alt="menu"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HTML -->
+    <div class="viewport">
+        <section class="inner-banner">
+            <div class="common-container banner-center">
+                <h1>Sitemap</h1>
+                <nav class="breadcrumb-nav" aria-label="breadcrumb">
+                    <a href="/">Home</a><span class="sep">›</span><span>Sitemap</span>
+                </nav>
+            </div>
+        </section>
+    </div>
+
+
+    <section class="sitemap-section">
+        <div class="common-container">
+            <div class="sitemap-grid">
+                <!-- Column 1 -->
+                <div class="sitemap-card">
+                    <div class="sitemap-title">Explore</div>
+                    <ul class="sitemap-list">
+                        <li><a href="/">Home <span class="chev">↗</span></a></li>
+                        <li><a href="about">About SMB <span class="chev">↗</span></a></li>
+                        <li>
+                            <a href="projects">Developments <span class="chev">↗</span></a>
+                            <ul>
+                                <li><a href="smb_suites">SMB Suites</a></li>
+                                <li><a href="lemirage">Le Mirage</a></li>
+                                <li><a href="karura_view">SMB Karura</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="blogs">News &amp; Updates <span class="chev">↗</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="sitemap-card">
+                    <div class="sitemap-title">Company</div>
+                    <ul class="sitemap-list">
+                        <li><a href="investor-relations">Investor Relations <span class="chev">↗</span></a>
+                        </li>
+                        <li><a href="careers">Careers <span class="chev">↗</span></a></li>
+                        <li><a href="contact">Contact Us <span class="chev">↗</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="sitemap-card">
+                    <div class="sitemap-title">Legal &amp; Tech</div>
+                    <ul class="sitemap-list">
+                        <li><a href="policy">Privacy Policy <span class="chev">↗</span></a></li>
+                        <li><a href="terms">Terms &amp; Conditions <span class="chev">↗</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">PLEASE ENTER YOUR DETAILS BELOW </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://app.visionarybizz.com/widget/form/TxJVxD4E8SpDsh0JaIc6"
+                        style="width:100%;height:100%;border:none;border-radius:3px" id="inline-TxJVxD4E8SpDsh0JaIc6"
+                        data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
+                        data-activation-type="alwaysActivated" data-activation-value=""
+                        data-deactivation-type="neverDeactivate" data-deactivation-value=""
+                        data-form-name="Enquire now Form " data-height="492"
+                        data-layout-iframe-id="inline-TxJVxD4E8SpDsh0JaIc6" data-form-id="TxJVxD4E8SpDsh0JaIc6"
+                        title="Enquire now Form ">
+                    </iframe>
+                    <script src="https://app.visionarybizz.com/js/form_embed.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="footer"> </section>
+    </div>
+
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollSmoother.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/splitting.min.js"></script>
+    <!-- <script src="js/aos.js"></script> -->
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/jquery.cookie.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script> new WOW().init(); </script>
+</body>
+
+</html>
