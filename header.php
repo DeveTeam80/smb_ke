@@ -119,6 +119,6 @@
     
   <div id="wbtn">
 			<a href="https://api.whatsapp.com/send/?phone=254110052052&text=Hello,%20I%20would%20like%20to%20know%20more%20about%20SMB%20Properties%27s%20projects" class="whats-icon" target="_blank">
-			  <img src="images/whatsapp.png" alt="">
+			  <!-- <img src="images/whatsapp.png" alt=""> -->
 			</a>
 			</div>
