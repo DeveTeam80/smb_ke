@@ -493,12 +493,12 @@
 					<div class="imageReveal wow scale-out-hor-left" data-wow-duration="0.6s" data-wow-offset="300"
 						data-wow-delay="0.5s"></div>
 					<picture>
-						<source srcset="images/mobile-projectspix.webp" media="screen and (max-width: 481px)"
+						<source srcset="images/banner/ban.jpg" media="screen and (max-width: 481px)"
 							type="image/webp">
 						<source srcset="images/banner/ban.jpg" media="screen" type="image/webp"
 							style="object-fit:contain;width:100%;">
-						<source srcset="images/mobile-projectspix.webp" media="screen and (max-width: 481px)">
-						<source srcset="images/banner/ban.jpg" media="screen"> <img srcset="images/projectspix.jpg"
+						<source srcset="images/banner/ban.jpg" media="screen and (max-width: 481px)">
+						<source srcset="images/banner/ban.jpg" media="screen"> <img srcset="images/banner/ban.jpg"
 							alt="kenya apartments for sale | luxury apartments in kenya" style="object-fit:contain;width:100%;">
 					</picture>
 					<!-- <img src="images/projectspix.jpg" alt=""> -->
@@ -791,7 +791,7 @@
 
 
 	<section id="tours">
-		<div class="reveal"> <video src="images/videos/SMB-video.mp4" type="video/mp4" autoplay muted loop
+		<div class="reveal"> <video src="images/videos/SMB-video.mp4" type="video/mp4" playsinline autoplay muted loop
 				style="z-index: -1; width: 100%;"></video></div>
 		<div class="toursBox">
 			<div class="text-center mt-2" data-wow-duration="1s" data-wow-offset="130" data-wow-delay="0.1s">
@@ -1142,36 +1142,8 @@
 		<div class="hover-cricle"></div>
 	</section>
 
-
-
 	<section id="footer"> </section>
 	</div>
-
-
-
-	<!-- Bootstrap Modal -->
-	<div class="modal fade" id="imagePopupModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static"
-		data-bs-keyboard="false"> <!-- Prevent close on outside click or ESC -->
-		<div class="modal-dialog modal-dialog-centered modal-930">
-			<div class="modal-content position-relative">
-
-				<!-- Close Button -->
-				<button type="button" class="custom-close-btn" data-bs-dismiss="modal" aria-label="Close">x</button>
-
-
-				<div class="modal-body p-0 text-center">
-					<!-- Desktop Image -->
-					<img src="images/deskpopup.jpg" alt="SMB Properties — luxury apartments in kenya; kenya apartments for sale" class="desktop-img mx-auto">
-
-					<!-- Mobile Image -->
-					<img src="images/mobpopup.jpg" alt="luxury apartments in kenya | apartments for sale in westlands nairobi" class="mobile-img">
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-
 	
 	<div class="modal" id="ssvModal">
 		<div class="modal-dialog modal-dialog-centered">
@@ -1910,7 +1882,7 @@
 				if (tot == 0) {
 					setTimeout(function () {
 						doneLoading();
-					}, 200);
+					}, 50);
 				}
 
 				function imgLoaded() {
@@ -1920,7 +1892,7 @@
 					if (c === tot) {
 						setTimeout(function () {
 							doneLoading();
-						}, 1000);
+						}, 100);
 					}
 				}
 
@@ -1934,7 +1906,7 @@
 					TweenMax.to(pvrl, 1.5, {
 						width: 0,
 						ease: Expo.easeInOut,
-						delay: .6
+						delay: .5
 					});
 					TweenMax.to(cvrl, 1.5, {
 						alpha: 0,
